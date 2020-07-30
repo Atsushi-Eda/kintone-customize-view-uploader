@@ -1,0 +1,7 @@
+dist/
+node_modules/
+manifest-test.json
+
+# misc
+.DS_Store
+.idea

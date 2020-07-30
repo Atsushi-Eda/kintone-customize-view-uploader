@@ -1,0 +1,49 @@
+{
+  "name": "kintone-customize-view-uploader",
+  "version": "1.0.0",
+  "description": "A kintone customize view uploader",
+  "bin": {
+    "kintone-customize-view-uploader": "bin/cli.js"
+  },
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "lint": "run-p lint:*",
+    "prerelease": "npm-run-all -p lint test -s build",
+    "clean": "rimraf dist",
+    "start": "tsc -w",
+    "lint:tsc": "tsc --noEmit",
+    "lint:eslint": "eslint --ext .ts src"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "keywords": [
+    "kintone"
+  ],
+  "author": "Atsushi Eda",
+  "license": "MIT",
+  "homepage": "https://github.com/Atsushi-Eda/kintone-customize-view-uploader",
+  "devDependencies": {
+    "@types/chokidar": "^1.7.5",
+    "@types/inquirer": "6.5.0",
+    "@types/mkdirp": "^1.0.1",
+    "@types/request-promise": "^4.1.46",
+    "@types/rimraf": "^3.0.0",
+    "ts-node": "^8.10.2"
+  },
+  "dependencies": {
+    "chokidar": "^3.4.0",
+    "inquirer": "^7.3.0",
+    "meow": "^7.0.1",
+    "mkdirp": "^1.0.4",
+    "os-locale": "^5.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "rimraf": "^3.0.2"
+  }
+}
